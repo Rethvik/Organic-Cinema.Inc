@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.footer-container {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(236, 231, 231);
+  height: 500px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "footer-container-1 footer-container-1 footer-container-1"
+    "footer-container-2 footer-container-2 footer-container-2"
+    "footer-container-3 footer-container-3 footer-container-3"
+    "footer-container-4 footer-container-4 footer-container-4";
+}
+
+.footer-container-1 {
+  grid-area: footer-container-1;
+  text-align: center;
+}
+.footer-container-1 h2 {
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+.footer-container-2 {
+  grid-area: footer-container-2;
+  text-align: center;
+}
+.footer-container-2 h2,
+.footer-container-2 h3 {
+  letter-spacing: 2px;
+}
+.footer-container-2 h2 {
+  font-size: 25px;
+}
+.footer-container-2 h3 {
+  font-size: 18px;
+}
+.footer-container-3 {
+  grid-area: footer-container-3;
+  text-align: center;
+}
+.footer-container-3 h4 {
+  font-size: 18px;
+}
+.footer-container-3 h4 i {
+  margin-right: 5px;
+  color: skyblue;
+}
+.footer-container-3 h4 a {
+  text-decoration: none;
+  color: white;
+}
+.footer-container-4 {
+  grid-area: footer-container-4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-container-4 div {
+  margin-right: 20px;
+}
+.footer-container-4 i {
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  color: rgb(189, 176, 176);
+}
+.footer-container i:hover {
+  transform: translateZ(90px);
+  color: white;
+}
+.scroll-anim i {
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  color: rgb(189, 176, 176);
+}
+.scroll-anim {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  transition: all 0.6s ease-in-out;
+  display: block;
+  text-align: center;
+}
+.scroll-anim .i-1 {
+  width: 50px;
+  height: 50px;
+}
+.scroll-anim .i-2 {
+  width: 50px;
+  height: 50px;
+}
+.scroll-anim:hover .i-1 {
+  transform: translateY(-50px);
+}
+.scroll-anim:hover .i-2 {
+  transform: translateY(-60px);
+}

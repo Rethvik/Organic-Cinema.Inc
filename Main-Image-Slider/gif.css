@@ -1,0 +1,76 @@
+body {
+  background-color: black;
+}
+.gif-container div {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+.gif-container div img {
+  width: 100%;
+}
+.gif-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gif-container-1 gif-container-1 gif-container-2 gif-container-3"
+    "gif-container-1 gif-container-1 gif-container-4 gif-container-5"
+    "gif-container-6 gif-container-8 gif-container-8 gif-container-9"
+    "gif-container-7 gif-container-8 gif-container-8 gif-container-10";
+}
+
+.gif-container-1 {
+  grid-area: gif-container-1;
+}
+
+.gif-container-2 {
+  grid-area: gif-container-2;
+}
+
+.gif-container-3 {
+  grid-area: gif-container-3;
+}
+
+.gif-container-4 {
+  grid-area: gif-container-4;
+}
+
+.gif-container-5 {
+  grid-area: gif-container-5;
+}
+
+.gif-container-6 {
+  grid-area: gif-container-6;
+}
+
+.gif-container-7 {
+  grid-area: gif-container-7;
+}
+
+.gif-container-8 {
+  grid-area: gif-container-8;
+}
+
+.gif-container-9 {
+  grid-area: gif-container-9;
+}
+
+.gif-container-10 {
+  grid-area: gif-container-10;
+}
+.gif-container div:active {
+  border: 1px solid white;
+}
+@media (max-width: 400px) {
+  .gif-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .gif-container div {
+    cursor: pointer;
+  }
+}
