@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.container-form {
+  background-color: white;
+  width: 85%;
+  margin: auto;
+  display: none;
+  margin-bottom: 20px;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "container-form-1 container-form-2 container-form-2"
+    "container-form-1 container-form-2 container-form-2"
+    "container-form-1 container-form-2 container-form-2";
+}
+
+.container-form-2 {
+  grid-area: container-form-2;
+  position: relative;
+}
+.container-form-2 form {
+  margin-top: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 3em;
+}
+.container-form-2 form input,
+.container-form-2 form textarea,
+.container-form-2 form button {
+  padding: 15px;
+  width: 350px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border: 1px solid black;
+}
+
+.container-form-2 form input::placeholder,
+.container-form-2 form textarea::placeholder {
+  color: gray;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container-form-2 form input:focus,
+.container-form-2 form textarea:focus {
+  background-color: black;
+  color: white;
+  transition: ease-in 0.3s;
+}
+.container-form-2 form input,textarea {
+  font-size: 1.8rem;
+}
+.container-form-2 form input:focus::placeholder,
+.container-form-2 form textarea:focus::placeholder {
+  
+  color: rgb(235, 222, 222);
+}
+#form-close {
+  width: 50px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  top: 0;
+  z-index: 5;
+}
+.container-form-2 form button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+.container-form-1 {
+  grid-area: container-form-1;
+}
+
+@media (max-width: 1162px) {
+  .container-form-1 img {
+    width: 400px;
+  }
+  .container-form-2 form input,
+  .container-form-2 form textarea,
+  .container-form-2 form button {
+    width: 100%;
+    margin-right: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .container-form {
+    grid-template-areas:
+      "container-form-1 container-form-1 container-form-1"
+      "container-form-2 container-form-2 container-form-2"
+      "container-form-2 container-form-2 container-form-2";
+  }
+  .container-form-1 img {
+    height: 350px;
+    width: 100%;
+  }
+  .container-form-2 {
+    width: 100%;
+  }
+}

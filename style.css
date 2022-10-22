@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size:62.5%;
+}
+body {
+  padding: 25px;
+  background-color: rgb(14, 11, 11);
+  font-family: "Open Sans", sans-serif;
+}
+
+.imgs {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 99999;
+  display: none;
+  transition:all .2s;
+}
+
+#pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content:space-between;
+  font-size: 3.2rem;
+  color: white;
+  width: 600px;
+  max-width: 95%;
+  height: auto;
+  background-color: black;
+  box-shadow :0 0.5rem 2rem white;
+  transform: translate(-50%, -50%);
+}
+@media  screen and (max-width:600px){
+  #popup{
+    width: 100%;
+    margin: 0 1rem;
+  }
+}
+#close-container {
+  position: absolute;
+  margin-left: auto;
+  cursor: pointer;
+  top:4px;
+  right: 10px;
+  width:1.3rem;
+  height: 1.1rem;
+  display:block;
+  text-align: center;
+}
+.fa-xmark {
+  font-size:1.2rem;
+  position: absolute;
+}
+.container {
+  width: 100%;
+  display: flex;
+  gap:1rem;
+  margin:0;
+  padding: 0;
+}
+.image-container {
+  width:50%;
+}
+
+.image-container img {
+  width:100%;
+  height: auto;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width:50%;
+}
+.card-title{
+  font-size:1.8rem !important;
+  margin-bottom: 1.5rem;
+}
+.content-container h1 {
+  font-size: 3.2rem;
+}
+.b{
+  background-color:black !important;
+  border-color:white !important;
+  font-size:1.2rem;
+  letter-spacing: 1px;
+}
+.b:hover{
+  background-color:white !important;
+  color:black !important;
+}
+.recent-heading{
+  margin:3rem 0;
+}
+#nafo {
+  font-size: 4rem;
+}
+#international,
+#film {
+  font-size: 2.8rem;
+}
+#kuwait,
+#year {
+  font-size: 4rem;
+  color: #f85050;
+}
+#link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  border: 1px solid white;
+  padding: 7px 2px;
+  width:90%;
+  text-align: center;
+  border-radius: 5px;
+}
+#link:hover {
+  background-color: white;
+  color: black;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+@font-face{
+  font-family:brands;
+  src:url(./Fonts/PointpantherdemoBold-X32lP.otf);
+
+}
+.recent-section{
+  width:100%;
+  font-family: "Open Sans", sans-serif;
+  display:flex;
+  justify-content:space-between;
+}
+
+.recent-section .recent-div{
+  display:flex;
+  width:50%;
+  position: relative;
+  gap:1rem;
+}
+.recent-section .card{
+  width:48%;
+  background-color:black;
+  border-color: white;
+  border-radius: 5px;
+}
+.recent-section .card-body h5{
+  font-size:2.5rem;
+  color: white;
+}
+.recent-section .card-body p{
+  font-size:1.2rem;
+  color: white;
+}
+.recent-section .card-body a{
+  font-size:1.2rem;
+}
+
+
+
+@media(max-width:800px){
+.recent-section{
+  flex-direction: column;
+  gap: 1rem;
+}
+.recent-section .recent-div {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+
+}
+}
+@media(max-width:450px) {
+
+  .recent-section .recent-div {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+    .recent-section .card {
+      width: 100%;
+    }
+}
+.magazine{
+  position: relative;
+}
+.brand-heading{
+  width:400px;
+  margin-left: 5rem;
+}
+.magazine-container{
+  display: flex;
+  justify-content:space-evenly;
+  margin-bottom:4rem;
+  gap:5rem;
+  margin-top:4rem;
+}
+.magazine-1{
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap: 2rem;
+  width:30%;
+}
+.magazine-1 div img{
+    width: 100%;
+    height:auto;
+}
+.magazine-photos{
+  position: relative;
+}
+.magazine-photos h4{
+  position:absolute;
+  top:50%;
+  color:white;
+  font-size:2.5rem;
+  left:-25%;
+  font-weight: bold;
+  z-index: 5;
+  letter-spacing:1px;
+}
+.magazine-photos p{
+  color:white;
+  position:absolute;
+  bottom:-5rem;
+  font-size:0.95rem;
+  padding: 1em;
+  opacity: 0;
+  z-index: 3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing:1px;
+  transition: ease-in-out .3s;
+}
+.magazine-photos i{
+  color:white;
+  font-size:1.3rem;
+  position:absolute;
+  bottom:0;
+  right:2px;
+  text-decoration: underline;
+  display: none;
+}
+.magazine-photos:hover.magazine-photos h4{
+  opacity:0;
+}
+.magazine-photos:hover.magazine-photos p{
+  opacity: 1;
+  bottom:-1rem;
+}
+.magazine-photos:hover.magazine-photos i{
+  opacity: 0;
+}
+.magazine-photos:hover.magazine-photos img {
+  opacity: 0.4;
+}
+.magazine-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 30%;
+  margin-top:5rem;
+}
+
+.magazine-2 div img {
+  width: 100%;
+  height: auto;
+}
+@media(max-width:800px){
+  .magazine-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .magazine-1,.magazine-2{
+    width: 70%;
+  }
+    .magazine-photos p {
+      font-size: 1rem;
+    }
+  .magazine-photos i{
+    display: block;
+  }
+  .magazine-photos i:focus{
+    display: none;
+  }
+}
+@media(max-width:450px){
+  .magazine-photos p{
+    font-size:.75rem;
+  }
+    .magazine-photos h4{
+      font-size:1.8rem;
+    }
+}
+@media(max-width:550px){
+  .brand-heading {
+      width: 250px;
+    }
+}
+
+@media(max-width:400px) {
+  .brand-heading {
+    width: 170px;
+    margin-left:0;
+  }
+}
+
+@media(max-width:280px) {
+  .magazine-photos p {
+    font-size: .45rem;
+  }
+
+  .magazine-photos h4 {
+    font-size: 1.3rem;
+  }
+}
+@media(max-width: 500px){
+  .content-container h1 {
+      font-size: 2rem;
+    }
+  
+    #nafo {
+      font-size: 3rem;
+    }
+  
+    #international,
+    #film {
+      font-size: 2rem;
+    }
+  
+    #kuwait,
+    #year {
+      font-size: 3rem;
+      color: #f85050;
+    }
+  
+    #link {
+      font-size: 1.2rem;
+    }
+}
+@media(max-width: 500px) {
+  .content-container h1 {
+    font-size: 1.5rem;
+  }
+
+  #nafo {
+    font-size: 2rem;
+  }
+
+  #international,
+  #film {
+    font-size: 1.5rem;
+  }
+
+  #kuwait,
+  #year {
+    font-size: 2rem;
+  }
+
+  #link {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+@media(max-width: 280px) {
+  .content-container h1 {
+    font-size: 1rem;
+  }
+
+  #nafo {
+    font-size: 1.3rem;
+  }
+
+  #international,
+  #film {
+    font-size: 1rem;
+  }
+
+  #kuwait,
+  #year {
+    font-size: 1.2rem;
+  }
+
+  #link {
+    font-size: .7rem;
+    width: 100%;
+  }
+}
+.nav-link{
+  font-size:1.5rem;
+  margin-right: .5rem;
+}
+
+.clients,
+.social {
+  width: 100%;
+  text-align: center;
+  color: white !important;
+}
+
+.navbar {
+  z-index: 2;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+}
+
+
+.marquee {
+  background-color: black;
+  position: relative;
+}
+.marquee .clients h2 {
+  font-size: 2rem;
+  color: gray;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+.clients-container div{
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-bottom:2rem;
+}
+.clients-container div img{
+  width:100px;
+}
+
+#whatsapp {
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  color: white;
+  z-index: 5;
+}
+@media (max-width: 550px) {
+  .clients-container div img {
+    width: 70px;
+  }
+
+}
+@media (max-width: 400px) {
+  .clients-container div img {
+    width: 50px;
+  }
+  .big {
+    width: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .clients-container div img {
+    width: 35px;
+  }
+
+}

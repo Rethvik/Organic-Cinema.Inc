@@ -1,0 +1,38 @@
+.c{
+    width:100%;
+    display:flex;
+    align-items:center;
+    background-color: black;
+    gap:3rem;
+}
+.carousel{
+    width:60%;
+}
+.carousel-inner{
+    width:100%;
+}
+.carousel-item{
+    width:100%;
+}
+.carousel-item img {
+    width: 100%;
+}
+h1{
+    color:white;
+    text-transform:uppercase;
+}
+@media(max-width:620px){
+    .c {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+        }
+        h1{
+            margin-top:3rem;
+        }
+                .carousel {
+                    width: 100%;
+                }
+}

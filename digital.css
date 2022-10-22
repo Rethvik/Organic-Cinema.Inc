@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  z-index: 1000;
+  grid-auto-flow: row;
+  margin-bottom: 1rem;
+  grid-template-areas:
+    "digital-container-1 digital-container-1"
+    "digital-container-1 digital-container-1"
+    "digital-container-2 digital-container-3";
+}
+.digital-container-1 {
+  grid-area: digital-container-1;
+  color: white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.digital-container-1 h2 {
+  font-size: 17px;
+  color: gray;
+  letter-spacing: 7px;
+  font-weight: bold;
+}
+.digital-container-1 h3 {
+  color: rgb(243, 225, 225);
+  font-size: 6rem;
+  letter-spacing: 4px;
+}
+.digital-container-2 {
+  grid-area: digital-container-2;
+  text-align: center;
+}
+.digital-container-2 .digital-logo,
+.digital-container-3 .digital-logo {
+  width: 250px;
+  margin-bottom: 10px;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:1rem;
+}
+.digital-container-2 .social-icons i,
+.digital-container-3 .social-icons i {
+  margin-right: 20px;
+  cursor: pointer;
+  color: rgb(167, 161, 161);
+}
+.digital-container-2 .social-icons i:hover,
+.digital-container-3 .social-icons i:hover {
+  color: white;
+}
+.digital-container-3 {
+  grid-area: digital-container-3;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+
+
+  .digital-container-2 {
+    margin-bottom: 5em;
+  }
+
+
+  .digital-container-1 h2 {
+    font-size: 17px;
+  }
+  .digital-container-1 h3 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 386px) {
+  .digital-container-1 h2 {
+      font-size: 1.9rem;
+    }
+  .digital-container-1 h3 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 300px) {
+  .digital-container-1 h3 {
+    font-size: 2rem;
+  }
+
+  .digital-container-2 {
+    margin-bottom: 1rem !important;
+  }
+
+  .digital-container-2 .digital-logo,
+  .digital-container-3 .digital-logo {
+    width: 100px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 700px) {
+  .digital-container-1 h3 {
+    font-size: 5rem;
+  }
+  .digital-container-2{
+    margin-bottom:1rem !important;
+  }
+  .digital-container-2 .digital-logo,
+  .digital-container-3 .digital-logo {
+    width: 100px;
+    margin-bottom: 5px;
+  }
+}
